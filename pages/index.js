@@ -34,7 +34,7 @@ const Page = () => {
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            About Me
+            About Me 中文测试
           </Heading>
           <p>
             {' '}
