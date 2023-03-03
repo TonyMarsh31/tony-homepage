@@ -17,8 +17,9 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import { IoLogoGithub } from 'react-icons/io5'
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   return (
@@ -29,6 +30,8 @@ const LinkItem = ({ href, path, children }) => {
       p={2}
       bg={active ? 'grassTeal' : undefined}
       color={active ? '#202023' : inactiveColor}
+      target={target}
+      {...props}
     >
       {children}
     </Link>
@@ -39,7 +42,7 @@ const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
 ))
 
-const Navbar = (props) => {
+const Navbar = props => {
   const { path } = props
 
   return (
@@ -53,7 +56,7 @@ const Navbar = (props) => {
       {...props}
     >
       <Container
-        dispaly="flex"
+        display="flex"
         p={2}
         maxW="container.md"
         wrap="wrap"
@@ -77,10 +80,23 @@ const Navbar = (props) => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
+          <LinkItem
+            target="_blank"
+            href="https://github.com/TonyMarsh-Hub/tony-homepage"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
+            Source
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
+
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
