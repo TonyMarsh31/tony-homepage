@@ -12,6 +12,7 @@ import {
   chakra
 } from '@chakra-ui/react'
 import Section from '../components/section'
+import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
@@ -19,101 +20,103 @@ import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
+  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
 const Page = () => {
   return (
-    <Container>
-      <Box
-        borderRadius="lg"
-        p={3}
-        mb={6}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-      >
-        Hi, I'm Sun Tao, welcome to my personal website.
-      </Box>
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            孙涛
-          </Heading>
-          <p>Student, Software Developer, and Web Design Enthusiast.</p>
-        </Box>
+    <Layout>
+      <Container>
         <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
+          borderRadius="lg"
+          p={3}
+          mb={6}
           textAlign="center"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         >
+          Hi, I'm Sun Tao, welcome to my personal website.
+        </Box>
+        <Box display={{ md: 'flex' }}>
+          <Box flexGrow={1}>
+            <Heading as="h2" variant="page-title">
+              孙涛
+            </Heading>
+            <p>Student, Software Developer, and Web Design Enthusiast.</p>
+          </Box>
           <Box
-            BorderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="100px"
-            h="100px"
-            display="inline-block"
-            borderRadius="full"
-            overflow="hidden"
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            textAlign="center"
           >
-            <ProfileImage
-              src="/images/profile.jpg"
-              alt="Profile Image"
+            <Box
+              BorderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              w="100px"
+              h="100px"
+              display="inline-block"
               borderRadius="full"
-              width={100}
-              height={100}
-            />
+              overflow="hidden"
+            >
+              <ProfileImage
+                src="/images/profile.jpg"
+                alt="Profile Image"
+                borderRadius="full"
+                width={100}
+                height={100}
+              />
+            </Box>
           </Box>
         </Box>
-      </Box>
-      <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          About Me
-        </Heading>
-        <Paragraph>
-          Hi, I'm Sun Tao, and I'm a student with a passion for coding. My
-          ultimate goal is to become a full-stack software developer, and I'm
-          currently working hard to gain the necessary skills and experience to
-          achieve that.
-        </Paragraph>
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="/works"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
-          >
-            My portfolio
-          </Button>
-        </Box>
-      </Section>
+        <Section delay={0.1}>
+          <Heading as="h3" variant="section-title">
+            About Me
+          </Heading>
+          <Paragraph>
+            Hi, I'm Sun Tao, and I'm a student with a passion for coding. My
+            ultimate goal is to become a full-stack software developer, and I'm
+            currently working hard to gain the necessary skills and experience
+            to achieve that.
+          </Paragraph>
+          <Box align="center" my={4}>
+            <Button
+              as={NextLink}
+              href="/works"
+              scroll={false}
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="teal"
+            >
+              My portfolio
+            </Button>
+          </Box>
+        </Section>
 
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>2001</BioYear>
-          Born in Shanghai, China.
-        </BioSection>
-        <BioSection>
-          <BioYear>2023</BioYear>
-          Graduated from Shanghai LiXin College of Accounting and Finance with a
-          bachelor's degree in Computer Science and Technology.
-        </BioSection>
-      </Section>
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            Bio
+          </Heading>
+          <BioSection>
+            <BioYear>2001</BioYear>
+            Born in Shanghai, China.
+          </BioSection>
+          <BioSection>
+            <BioYear>2023</BioYear>
+            Graduated from Shanghai LiXin College of Accounting and Finance with
+            a bachelor's degree in Computer Science and Technology.
+          </BioSection>
+        </Section>
 
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-        <Paragraph>
-          Music, Machine Learning, Web Development, and more.
-        </Paragraph>
-      </Section>
-    </Container>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            I ♥
+          </Heading>
+          <Paragraph>
+            Music, Machine Learning, Web Development, and more.
+          </Paragraph>
+        </Section>
+      </Container>
+    </Layout>
   )
 }
 export default Page
