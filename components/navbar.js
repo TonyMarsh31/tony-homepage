@@ -51,7 +51,7 @@ const Navbar = props => {
       as="nav"
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{ backdropFilter: 'blur(10px)' }}
+      css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       {...props}
     >
@@ -103,7 +103,7 @@ const Navbar = props => {
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
-                aria-lable="Options"
+                aria-label="Options"
               />
               <MenuList>
                 <MenuItem as={MenuLink} href="/">
