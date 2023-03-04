@@ -13,7 +13,7 @@ const LogoBox = styled.span`
   padding: 10px;
 
   > img {
-    transition: 200ms ease;
+h    transition: 100ms ease;
   }
 
   &:hover > img {
@@ -24,14 +24,16 @@ const LogoBox = styled.span`
 const Logo = () => {
   const hiImg = `/images/hi${useColorModeValue('', '-dark')}.png`
   return (
-    <Link href="/">
+    <Link href="/" scroll={false}>
       <LogoBox>
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamiliy="M PLUS Rounded 1c"
+          fontFamiliy="LXGW WenKai"
+          fontSize={'x-large'}
+          fontWeight={'bold'}
           ml={3}
         >
-          Tony
+          涛Tony
         </Text>
         <Image src={hiImg} alt="logo" width={20} height={20} />
       </LogoBox>
