@@ -13,7 +13,7 @@ const LogoBox = styled.span`
   padding: 10px;
 
   > img {
-h    transition: 100ms ease;
+    transition: 100ms ease;
   }
 
   &:hover > img {
@@ -28,7 +28,7 @@ const Logo = () => {
       <LogoBox>
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamiliy="LXGW WenKai"
+          fontFamily="LXGW WenKai"
           fontSize={'x-large'}
           fontWeight={'bold'}
           ml={3}

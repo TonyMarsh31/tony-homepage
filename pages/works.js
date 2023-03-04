@@ -4,8 +4,8 @@ import { WorkGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
 import thumbReggie from '../public/images/works/reggie.png'
-const Works = () => {
-  return (
+const Works = () => (
+  <Layout titile="Works">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
         Self-taught open source project
@@ -39,7 +39,7 @@ const Works = () => {
         </Section>
       </SimpleGrid>
     </Container>
-  )
-}
+  </Layout>
+)
 
 export default Works

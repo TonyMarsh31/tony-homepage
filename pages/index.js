@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -23,7 +22,7 @@ const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
-const Page = () => {
+const Home = () => {
   return (
     <Layout>
       <Container>
@@ -33,6 +32,7 @@ const Page = () => {
           mb={6}
           textAlign="center"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          css={{ backdropFilter: 'blur(10px)' }}
         >
           Hi, I'm Sun Tao, welcome to my personal website.
         </Box>
@@ -50,7 +50,7 @@ const Page = () => {
             textAlign="center"
           >
             <Box
-              BorderColor="whiteAlpha.800"
+              borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
               w="100px"
@@ -63,8 +63,8 @@ const Page = () => {
                 src="/images/profile.jpg"
                 alt="Profile Image"
                 borderRadius="full"
-                width={100}
-                height={100}
+                width="100"
+                height="100"
               />
             </Box>
           </Box>
@@ -158,4 +158,4 @@ const Page = () => {
     </Layout>
   )
 }
-export default Page
+export default Home
