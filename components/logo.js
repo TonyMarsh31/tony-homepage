@@ -33,7 +33,7 @@ const Logo = () => {
           fontWeight={'bold'}
           ml={3}
         >
-          涛Tony
+          Tony
         </Text>
         <Image src={hiImg} alt="logo" width={20} height={20} />
       </LogoBox>
