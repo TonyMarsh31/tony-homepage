@@ -15,7 +15,7 @@ import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -34,7 +34,7 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          Hi, I'm Sun Tao, welcome to my personal website.
+          Hi, I&apos;m Sun Tao, welcome to my personal website.
         </Box>
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
@@ -74,10 +74,10 @@ const Home = () => {
             About Me
           </Heading>
           <Paragraph>
-            Hi, I'm Sun Tao, and I'm a student with a passion for coding. My
-            ultimate goal is to become a full-stack software developer, and I'm
-            currently working hard to gain the necessary skills and experience
-            to achieve that.
+            Hi, I&apos;m Sun Tao, and I&apos;m a student with a passion for
+            coding. My ultimate goal is to become a full-stack software
+            developer, and I&apos;m currently working hard to gain the necessary
+            skills and experience to achieve that.
           </Paragraph>
           <Box align="center" my={4}>
             <Button
@@ -103,7 +103,7 @@ const Home = () => {
           <BioSection>
             <BioYear>2023</BioYear>
             Graduated from Shanghai LiXin College of Accounting and Finance with
-            a bachelor's degree in Computer Science and Technology.
+            a bachelor&apos;s degree in Computer Science and Technology.
           </BioSection>
         </Section>
 
