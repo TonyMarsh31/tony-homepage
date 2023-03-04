@@ -115,6 +115,45 @@ const Page = () => {
             Music, Machine Learning, Web Development, and more.
           </Paragraph>
         </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/TonyMarsh-Hub" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @TonyMarsh-Hub
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+
+          <Heading as="h3" variant="section-title">
+            Contact
+          </Heading>
+          <p>
+            Currently ,I am looking for a job(or intern), you can contact me by
+            email.
+          </p>
+
+          <Box align="center" my={4}>
+            <Button
+              as={NextLink}
+              href="mailto:tonymarsh0331@gmail.com"
+              scroll={false}
+              leftIcon={<EmailIcon />}
+              colorScheme="teal"
+            >
+              Click here to send me an email.
+            </Button>
+          </Box>
+        </Section>
       </Container>
     </Layout>
   )
