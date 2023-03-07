@@ -7,6 +7,9 @@ import thumbReggie from '../public/images/works/reggie.png'
 const Works = () => (
   <Layout titile="Works">
     <Container>
+      <Heading as "h1" fontSize={24} mb={4}>
+        网站仍在建设中…… Still under construction
+      </Heading>
       <Heading as="h3" fontSize={20} mb={4}>
         toy projects
       </Heading>
@@ -24,7 +27,7 @@ const Works = () => (
       </SimpleGrid>
 
       <Heading as="h3" fontSize={20} mb={4}>
-        School works
+        school works
       </Heading>
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
