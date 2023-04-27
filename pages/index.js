@@ -122,13 +122,13 @@ const Home = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link href="https://github.com/TonyMarsh-Hub" target="_blank">
+              <Link href="https://github.com/TonyMarsh31" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
                   leftIcon={<IoLogoGithub />}
                 >
-                  @TonyMarsh-Hub
+                  @TonyMarsh31
                 </Button>
               </Link>
             </ListItem>

@@ -18,7 +18,7 @@ const Work = () => (
           <Meta>Source</Meta>
           <span>
             <Link
-              href="https://github.com/TonyMarsh-Hub/reggie_take_out"
+              href="https://github.com/TonyMarsh31/reggie_take_out"
               target="_blank"
             >
               Github repository
